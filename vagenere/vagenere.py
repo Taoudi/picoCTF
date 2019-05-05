@@ -29,7 +29,7 @@ def calc_letter(char):
     return ord(char.lower()) - 97
 
 
-def prettify(list, d, nr):
+def count_occurrences(list, d, nr):
     # print(list + "  ", end='')
     if list[nr].lower() in d:
         d[list[nr].lower()] += 1
@@ -56,7 +56,7 @@ for num in range(4):
     for x in C:
         if len(x) > 11:
             # print(x)
-            prettify(x, d, num)
+            count_occurrences(x, d, num)
     # print(d)
     #print(max(zip(d.values(), d.keys())))
     print(chr(calc_letter(max(zip(d.values(), d.keys()))[1]) - 4 + 97))
